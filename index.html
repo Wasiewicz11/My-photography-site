@@ -6,7 +6,12 @@
     <meta name="description" content="">
     <meta name="keywords" content="fotografia, film, fotograf, fotograf na ślub, kamerzysta na wesele, wesele">
     <title>Document</title>
-    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="css\main.css" type="text/css">
+    <link rel="stylesheet" href="css/fontello.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+
+
 
 </head>
 <body>
@@ -17,10 +22,10 @@
                 <div class="menu">
                     <div class="i1">
                         <li class="item1">
-                            <a href="https://www.facebook.com/">HOME</a>
+                            <a href="index.html">HOME</a>
                         </li>
                         <li class="item2">
-                            <a href="">HISTORIE</a>
+                            <a href="stories.html">HISTORIE</a>
                         </li>
                     </div>
 
@@ -28,10 +33,10 @@
 
                     <div class="i2">
                         <li class="item3">
-                            <a href="">O MNIE</a>
+                            <a href="about.html">O MNIE</a>
                         </li>
                         <li class="item4">
-                            <a href="">KONTAKT</a>
+                            <a href="contact.html">KONTAKT</a>
                         </li>
                     </div>
                 </div>                
@@ -43,13 +48,20 @@
 
     </div>
     
+    
+        <!--button to go up-->
+    <button id="scrollUp" onclick="goUp()">
+        <i class="material-icons" id="arrowIco">arrow_upward</i>
+    </button>
+
+
         <!--ABOUT ME-->
     <div id="aboutMe">
-        Jestem dla was. Wasze wspomnienia to moje wspomnienia.
+        Utrwalam wasze wspomnienia.
         <div class="buttonAboutMe"><a href="">
             <h2>Kliknij</h2>
         </a></div> 
-        żeby mnie poznać
+        żeby poznać miłosne historie
     </div>
 
         <!--VIDEO BLOCK-->
@@ -60,7 +72,7 @@
         </div>
     </div>
 
-        <!--SPAN-->
+        <!--ABOUT ME-->
     <div id="aboutMe">
         Jestem dla was. Wasze wspomnienia to moje wspomnienia.
         <div class="buttonAboutMe"><a href="">
@@ -79,7 +91,7 @@
                 <h2>Miłość</h2>
             </div>
             <div class="text-row-1">
-                Wasza Milość.
+                To wy jesteście jej definicją.
             </div>
         </div>
     </div>
@@ -90,10 +102,10 @@
             <div id="span"></div>
             <div id="row-2">
                 <div class="title-row-2">
-                    <h2>Miłość</h2>
+                    <h2>HISTORIE</h2>
                 </div>
                 <div class="text-row-2">
-                    Wasza Milość.
+                    Wy je tworzycie, ja je utrwalam.
                 </div>
             </div>
         </div>
@@ -104,16 +116,47 @@
             <div id="span"></div>
             <div id="row-3">
                 <div class="title-row-3">
-                    <h2>Miłość</h2>
+                    <h2>Wspomnienia</h2>
                 </div>
                 <div class="text-row-3">
-                    Wasza Milość.
+                    Bo to one mają największą wartość.
                 </div>
             </div>
         </div>
 
-
+        <!--FOOTER-->
+        <div id="footer">
+            <a href="https://www.facebook.com/profile.php?id=100082131255967" target="_blank"><div class="social-media"><i class="icon-facebook"></i></div></a>
+            <a href="https://www.instagram.com/framesinflames/" target="_blank"><div class="social-media"><i class="icon-instagram"></i></div></a>
+            <a href="https://vimeo.com/user159423883" target="_blank"><div class="social-media"><i class="icon-youtube-play"></i></div></a>
+            <a href="https://www.facebook.com/" target="_blank"><div class="social-media-mail"><h4></h4><i class="icon-mail"></i></div></a>
+        </div>
+    
+    
+    
     <!-- typeWritting Script / main text-->
     <script src="typewriting-master/typewriting.min.js"></script>
+   
+    <!-- scroll up-->
+    <script>
+        let scrollUp = document.getElementById("scrollUp");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollUp.style.display = "block";
+        } else {
+            scrollUp.style.display = "none";
+        }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function goUp() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        } 
+    </script>
+
 </body>
 </html>
